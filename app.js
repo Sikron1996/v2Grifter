@@ -6,7 +6,7 @@ const PROJECT_ID = "fe55ea601c3e7e0925c0b33723d6b158";
 const READ_RPC = "https://ethereum.publicnode.com";
 const MAX_SUPPLY = 6666;
 const PRICE_ETH = "0.0001";
-const BASE_METADATA = "https://bafybeidj7wtdowj7d5vazgplrck6baqqie4jng7xqgcouaicbmnjeirx5q.ipfs.inbrowser.link/";
+const BASE_METADATA = "https://ipfs.io/ipfs/bafybeidj7wtdowj7d5vazgplrck6baqqie4jng7xqgcouaicbmnjeirx5q/";
 
 const ABI = ["function mint(uint256 amount) external payable","function PRICE() view returns (uint256)","function totalSupply() view returns (uint256)","function minted(address user) view returns (uint256)","function tokenURI(uint256 tokenId) view returns (string)"];
 
