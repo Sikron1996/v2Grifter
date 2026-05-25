@@ -1,1 +1,1 @@
-Replace PASTE_CONTRACT_ADDRESS_HERE in app.js with contract address.
+Fixed images + banner included. Upload all files to Vercel.

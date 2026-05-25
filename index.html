@@ -1,1 +1,83 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>v2 Grifter Sold Out</title><link rel="stylesheet" href="style.css"></head><body><main class="app"><header><div class="brand">v2 Grifter</div><nav><a href="#wall">Wall</a><a href="#random">Random</a><a id="openseaLink" target="_blank">OpenSea</a><a id="etherscanLink" target="_blank">Etherscan</a></nav><button id="connectWalletBtn">Connect</button></header><section class="hero"><div class="heroText"><div class="statusTag">SOLD OUT</div><h1>ALL GRIFTERS<br>CLAIMED</h1><p>The mint is over. The archive is open. Explore all 6,666 v2 Grifters, inspect traits, find rare pieces, and jump to secondary.</p><div class="stats"><div><span>Minted</span><b id="mintedText">6666</b></div><div><span>Remaining</span><b id="remainingText">0</b></div><div><span>Supply</span><b>6666</b></div></div></div><section id="random" class="terminal"><div class="terminalTop">GRIFTER DATABASE</div><div class="preview"><img id="randomImage"></div><h2 id="randomName">v2 Grifter</h2><div id="randomAttributes" class="attributes smallAttrs"></div><button id="randomBtn">Show Random Grifter</button><a id="randomOpenSea" class="marketBtn" target="_blank">View on OpenSea</a></section></section><section id="wall" class="wall"><div class="wallTop"><div><h2>Live Collection Wall</h2><p>Click any NFT to open fullscreen details and attributes.</p></div><div class="tools"><input id="searchId" placeholder="Search ID"><button id="goBtn">Go</button><button id="loadVisibleBtn">Load visible</button></div></div><div id="grid" class="grid"></div></section></main><div id="detailModal" class="modal hidden"><div class="detailCard"><button id="closeDetailBtn" class="close">×</button><div class="detailImg"><img id="detailImage"></div><div class="detailInfo"><div class="soldBadge">SOLD OUT ARCHIVE</div><h3 id="detailName">v2 Grifter</h3><div id="detailId" class="detailId">#1</div><p id="detailDescription"></p><div id="attributes" class="attributes"></div><a id="detailOpenSea" target="_blank" class="marketBtn">View on OpenSea</a></div></div></div><div id="walletModal" class="modal hidden"><div class="walletCard"><button id="closeWalletBtn" class="close">×</button><h3>Connect Wallet</h3><button id="browserWalletBtn">MetaMask / Rabby / Browser Wallet</button><button id="walletConnectBtn">WalletConnect QR / Mobile Wallets</button><div id="wallet">not connected</div></div></div><script type="module" src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>v2 Grifter Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="logo">v2 Grifter</div>
+  <div class="supply">6,666 UNIQUE NFTs</div>
+  <nav>
+    <a class="active">Dashboard</a><a>Collection</a><a>Rarity Tool</a>
+    <a>Holders</a><a>Top Holders</a><a>Random Grifter</a>
+  </nav>
+</aside>
+
+<main class="main">
+  <header class="hero">
+    <img src="banner.png" class="banner" alt="v2 Grifter banner">
+    <div class="topbar"><span>ALL 6,666 GRIFTERS CLAIMED</span><span>SOLD OUT</span><span>GRIFTER DATABASE_</span></div>
+    <div class="stats">
+      <div class="card"><h3>TOTAL SUPPLY</h3><div class="value">6,666</div></div>
+      <div class="card"><h3>TOTAL HOLDERS</h3><div class="value">2,431</div></div>
+      <div class="card"><h3>FLOOR PRICE</h3><div class="value">0.065Ξ</div></div>
+      <div class="card"><h3>TOTAL VOLUME</h3><div class="value">412Ξ</div></div>
+    </div>
+  </header>
+
+  <section class="wallPanel">
+    <div class="panelHeader">
+      <h2>LIVE NFT WALL</h2>
+      <div class="tools"><input id="search" placeholder="Search ID..."><button id="go">GO</button></div>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section class="bottom">
+    <div class="randomBox">
+      <h3>RANDOM GRIFTER</h3>
+      <img id="randomImage">
+      <button id="randomBtn">SHOW RANDOM</button>
+    </div>
+    <div class="salesBox">
+      <h3>RECENT SALES</h3>
+      <div class="sale">#1623 SOLD FOR 0.28 ETH</div>
+      <div class="sale">#542 SOLD FOR 0.19 ETH</div>
+      <div class="sale">#3055 SOLD FOR 0.25 ETH</div>
+      <div class="sale">#88 SOLD FOR 0.15 ETH</div>
+    </div>
+  </section>
+</main>
+
+<aside class="rightbar">
+  <div class="rarity">
+    <h3>RARITY TOOL</h3>
+    <div class="trait">LEGENDARY <span>120</span></div>
+    <div class="trait">EPIC <span>420</span></div>
+    <div class="trait">RARE <span>1,200</span></div>
+    <div class="trait">COMMON <span>4,926</span></div>
+  </div>
+  <div class="holders">
+    <h3>TOP HOLDERS</h3>
+    <div class="holder"><span>#1</span><code>0x7f39...d89a</code><b>120</b></div>
+    <div class="holder"><span>#2</span><code>0x3ab6...f1c2</code><b>88</b></div>
+    <div class="holder"><span>#3</span><code>0x9e11...a7b3</code><b>64</b></div>
+  </div>
+</aside>
+</div>
+
+<div id="modal" class="modal hidden">
+  <div class="modalContent">
+    <button id="closeModal">✕</button>
+    <img id="modalImage">
+    <div class="meta"><h2 id="modalTitle">v2 Grifter</h2><div id="traits"></div></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
