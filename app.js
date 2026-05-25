@@ -104,7 +104,7 @@ async function openDetail(id){
     $("detailId").textContent = "#" + id;
     $("detailDescription").textContent = meta.description || "";
     $("attributes").innerHTML = attrHtml(meta.attributes);
-    $("detailOpenSea").href = CONTRACT_ADDRESS === "PASTE_CONTRACT_ADDRESS_HERE" ? "#" : `https://opensea.io/assets/ethereum/${CONTRACT_ADDRESS}/${id}`;
+    $("detailOpenSea").href = CONTRACT_ADDRESS === "0xbe75d09F423d81ad63Bc511b49462e216D394836" ? "#" : `https://opensea.io/assets/ethereum/${CONTRACT_ADDRESS}/${id}`;
     detailModal.classList.remove("hidden");
   }catch(e){ alert("Metadata load error: " + e.message); }
 }
@@ -115,7 +115,7 @@ async function randomGrifter(){
   $("randomImage").src = meta.image;
   $("randomName").textContent = meta.name || ("v2 Grifter #" + id);
   $("randomAttributes").innerHTML = attrHtml((meta.attributes || []).slice(0,4));
-  $("randomOpenSea").href = CONTRACT_ADDRESS === "PASTE_CONTRACT_ADDRESS_HERE" ? "#" : `https://opensea.io/assets/ethereum/${CONTRACT_ADDRESS}/${id}`;
+  $("randomOpenSea").href = CONTRACT_ADDRESS === "0xbe75d09F423d81ad63Bc511b49462e216D394836" ? "#" : `https://opensea.io/assets/ethereum/${CONTRACT_ADDRESS}/${id}`;
 }
 
 async function setup(p, acc){
@@ -153,7 +153,7 @@ async function connectWC(){
 }
 
 async function loadHolderStats(){
-  if(!readProvider || CONTRACT_ADDRESS === "PASTE_CONTRACT_ADDRESS_HERE"){
+  if(!readProvider || CONTRACT_ADDRESS === "0xbe75d09F423d81ad63Bc511b49462e216D394836"){
     alert("Insert contract address in app.js first");
     return;
   }
