@@ -1,6 +1,6 @@
 import { ethers } from "https://esm.sh/ethers@6.13.4";
 import EthereumProvider from "https://esm.sh/@walletconnect/ethereum-provider@2.17.2";
-const CONTRACT_ADDRESS="PASTE_CONTRACT_ADDRESS_HERE";
+const CONTRACT_ADDRESS="0xbe75d09F423d81ad63Bc511b49462e216D394836";
 const PROJECT_ID="fe55ea601c3e7e0925c0b33723d6b158";
 const READ_RPC="https://ethereum.publicnode.com";
 const MAX_SUPPLY=6666;
