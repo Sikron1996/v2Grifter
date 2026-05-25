@@ -1,1 +1,1 @@
-After deploy, replace PASTE_CONTRACT_ADDRESS_HERE in site/app.js with contract address.
+Replace PASTE_CONTRACT_ADDRESS_HERE in app.js with contract address.
