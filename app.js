@@ -29,14 +29,14 @@ function short(a){ return a.slice(0,6)+"..."+a.slice(-4); }
 function ipfsToHttp(u){ return u && u.startsWith("ipfs://") ? "https://ipfs.io/ipfs/" + u.replace("ipfs://","") : u; }
 
 function setLinks(){
-  if(CONTRACT_ADDRESS !== "PASTE_CONTRACT_ADDRESS_HERE"){
+  if(CONTRACT_ADDRESS !== "0xbe75d09F423d81ad63Bc511b49462e216D394836"){
     $("etherscanLink").href = "https://etherscan.io/address/" + CONTRACT_ADDRESS;
     $("openseaLink").href = "https://opensea.io/assets/ethereum/" + CONTRACT_ADDRESS;
   }
 }
 
 function initRead(){
-  if(CONTRACT_ADDRESS === "PASTE_CONTRACT_ADDRESS_HERE") return false;
+  if(CONTRACT_ADDRESS === "0xbe75d09F423d81ad63Bc511b49462e216D394836") return false;
   readProvider = new ethers.JsonRpcProvider(READ_RPC);
   readContract = new ethers.Contract(CONTRACT_ADDRESS, ABI, readProvider);
   return true;
